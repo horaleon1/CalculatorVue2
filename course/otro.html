@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="otro.css">
+</head>
+<body>
+
+  <!-- <div id ="app">
+    <h1>Bienvenidos</h1>
+    <button 
+    onclick="alert('Bienvenido')" 
+    v-bind:disabled = "email.length < 2" 
+    :class = "[email.length < 2 ? 'red':'green']">Submit</button>
+    {{ greeting }}
+
+    <p v-text = "email">
+
+    </p>
+      [to use ternary operator]
+      { one option}
+      v-bind  = : y el objeto a manipular-->
+    <!-- <br><br>
+    <input v-model = "email">
+    <br><br>
+
+
+    <div v-if = "count === 1"> Vamos!!!</div>
+    <div v-else-if = "count === 2"> Mejorando!!!</div>
+    <div v-else> Muy bien!!!</div>
+
+    <div v-show = "count === 1"> Hola Cielo</div>
+ 
+    <ul>
+      <li v-for = "dog in dogs"> {{ dog }} </li>
+    </ul>
+    <br><br>
+    <ul>
+      <li v-for = "cat in cats"> {{ cat.name }} </li>
+    </ul>
+   <br>
+   <input v-model = "newCat" v-on:keyup.enter = "addKitty" >
+   <button @click = "addKitty">
+     Agregar
+   </button>
+
+  </div>  -->
+  <div id = "app">
+    <h1 v-once>{{ title }}</h1>
+    <p> {{ sayHello() }}</p> <a v-bind:href="link">Google</a>
+  
+  <hr>
+   <!-- 
+<p v-html = "finishedLink"></p>
+   -->
+  <button v-on:click = "increase(5,$event)"> Click Me </button>
+  <p> {{ count }} </p>
+  <p v-on:mousemove = "updateCoordinates">  Coordinates: {{ x }} / {{ y }}
+    <span v-on:mousemove.stop = ""> Dead Zone</span>
+  </p>
+
+  <input type="text" v-on:keyup.enter.space = "alertMe">
+
+</div>
+
+
+</body>
+<script src="./otro.js"></script>
+</html>
