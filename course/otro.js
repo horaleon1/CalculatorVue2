@@ -36,7 +36,9 @@ new Vue ({
     link: 'http://google.com',
     count: 0,
     x: 0,
-    y: 0
+    y: 0,
+    name: "hola",
+    atRed:false
     
 },
 methods: {

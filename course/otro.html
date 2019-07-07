@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <link rel="stylesheet" href="otro.css">
-</head>
-<body>
-
-  <!-- <div id ="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="otro.css" />
+  </head>
+  <body>
+    <!-- <div id ="app">
     <h1>Bienvenidos</h1>
     <button 
     onclick="alert('Bienvenido')" 
@@ -49,25 +48,32 @@
    </button>
 
   </div>  -->
-  <div id = "app">
-    <h1 v-once>{{ title }}</h1>
-    <p> {{ sayHello() }}</p> <a v-bind:href="link">Google</a>
-  
-  <hr>
-   <!-- 
+    <div id="app">
+      <h1 v-once>{{ title }}</h1>
+      <p>{{ sayHello() }}</p>
+      <a v-bind:href="link">Google</a>
+
+      <hr />
+      <!-- 
 <p v-html = "finishedLink"></p>
    -->
-  <button v-on:click = "increase(5,$event)"> Click Me </button>
-  <p> {{ count }} </p>
-  <p v-on:mousemove = "updateCoordinates">  Coordinates: {{ x }} / {{ y }}
-    <span v-on:mousemove.stop = ""> Dead Zone</span>
-  </p>
+      <button v-on:click="increase(5,$event)">Click Me</button>
+      <p>{{ count }}</p>
+      <p v-on:mousemove="updateCoordinates">
+        Coordinates: {{ x }} / {{ y }}
+        <span v-on:mousemove.stop=""> Dead Zone</span>
+      </p>
 
-  <input type="text" v-on:keyup.enter.space = "alertMe">
+      <input type="text" v-on:keyup.enter.space="alertMe" />
+      <br /><br />
+      <input type="text" v-model="name" />
+      <p>{{ name }}</p>
+      <div class = "blue" @click="atRed = !atRed" :class="{ red:atRed }">
+        hola
+      </div>
+      <div :class="{ red:atRed }">hola2</div>
 
-</div>
-
-
-</body>
-<script src="./otro.js"></script>
+    </div>
+  </body>
+  <script src="./otro.js"></script>
 </html>
