@@ -65,9 +65,10 @@
       </p>
 
       <input type="text" v-on:keyup.enter.space="alertMe" />
-      <br /><br />
+      <br/><br/>
       <input type="text" v-model="name" />
       <p>{{ name }}</p>
+      
       <div class = "blue" @click="atRed = !atRed" :class="{ red:atRed }">
         hola
       </div>
@@ -77,3 +78,4 @@
   </body>
   <script src="./otro.js"></script>
 </html>
+ 
