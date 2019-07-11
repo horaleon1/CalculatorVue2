@@ -48,7 +48,7 @@
    </button>
 
   </div>  -->
-    <div id="app">
+    <!-- <div id="app">
       <h1 v-once>{{ title }}</h1>
       <p>{{ sayHello() }}</p>
       <a v-bind:href="link">Google</a>
@@ -57,7 +57,7 @@
       <!-- 
 <p v-html = "finishedLink"></p>
    -->
-      <button v-on:click="increase(5,$event)">Click Me</button>
+    <!-- <button v-on:click="increase(5,$event)">Click Me</button>
       <p>{{ count }}</p>
       <p v-on:mousemove="updateCoordinates">
         Coordinates: {{ x }} / {{ y }}
@@ -72,10 +72,45 @@
       <div class = "blue" @click="atRed = !atRed" :class="{ red:atRed }">
         hola
       </div>
-      <div :class="{ red:atRed }">hola2</div>
+      <div :class="{ red:atRed }">hola2</div> -->
 
-    </div>
+    <!-- // section 3 -->
+
+    <!-- </div> -->
+
+    <!-- <div id="app">
+      <p v-if="show">You can see me!</p>
+      <p v-else>Now you can see me!</p>
+      <p>Do you also see me?</p>
+      <button @click="show = !show">Switch</button>
+
+      <ul>
+        <li v-for="(ingredient,i) in ingredients">
+          {{ ingredient }} ({{ i }})
+        </li>
+      </ul>
+
+      <div v-for="(ingredient,in) in ingredients">
+        <h1>{{ ingredient }}</h1>
+        <p>{{ in }}</p>
+      </div>--->
+
+     <!-- <hr>
+     <ul>
+       <li v-for="person in persons">  {{ person.name }} 
+       
+      </li>
+     </ul> -->
+     <!-- <span v-for = "n in 1"> {{ n }}</span>
+    <button @click="ingredients.push('hola')"> add new</button>
+     <hr>
+
+    </div>  -->
+<div id="app">
+
+
+
+</div>
   </body>
   <script src="./otro.js"></script>
 </html>
- 
