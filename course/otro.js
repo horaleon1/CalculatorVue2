@@ -90,15 +90,14 @@ new Vue({
       this.monsterHealth = 100;
     },
     attack: function() {
-      var damage = this.calculateDamage(3, 10);
-      this.monsterHealth -= damage;
-
+      this.monsterHealth -= this.calculateDamage(3, 10);
       if(this.checkWin()){
         return;
       }
       
-      damage = this.calculateDamage(5, 12);
-      this.playerHealth -= damage;
+      this.playerHealth -= this.calculateDamage(5, 12);
+      this.checkWin();
+    
     },
     specialAttack: function() {},
     heal: function() {},
@@ -108,7 +107,7 @@ new Vue({
     },
     checkWin: function() {
       if (this.monsterHealth <= 0) {
-        if (confirm("Yo won! new game?")) {
+        if (confirm("You won! new game?")) {
           this.startGame();
         } else {
           this.gameIsRunning = false;
